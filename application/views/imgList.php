@@ -7,7 +7,7 @@
 				<i class="item-top"></i>
 				<div class="item-main">
 					<div class="item-pic">
-						<img src="public/uploads/<?php echo($item['imgname']);?>.jpg" class="J-miaoPic" imgid="<?php echo($item['imgid']);?>" uid="<?php echo($item['uid']); ?>" uname="<?php echo($item['uname']);?>" uurl="<?php echo($item['uurl'])?>" uavatar="<?php echo($item['uavatar']);?>" imgtext="<?php echo($item['imgtext']); ?>" imgdate="<?php echo($item['imgdate']);?>" />
+						<img src="<?php echo(base_url('public/uploads\/').$item['imgname']) ;?>.jpg" class="J-miaoPic" imgid="<?php echo($item['imgid']);?>" uid="<?php echo($item['uid']); ?>" uname="<?php echo($item['uname']);?>" uurl="<?php echo($item['uurl'])?>" uavatar="<?php echo($item['uavatar']);?>" imgtext="<?php echo($item['imgtext']); ?>" imgdate="<?php echo($item['imgdate']);?>" />
 					</div>
 					<div class="item-info">
 						<p class="item-describe-txt"><?php echo($item['imgtext']);?></p>
@@ -33,7 +33,8 @@
 	</div>
 	<?php endforeach;?>
 </div>
-    <div class="pager wrapper"><div class="pager-inner"><a href="#" class="prev">上一页</a><a href="#" class="current">1</a><a href="#">2</a><a href="#">3</a><span class="ellipsis">...</span><a href="#">4</a><a href="#" class="next">下一页</a></div></div>
+
+    <div class="pager wrapper"><div class="pager-inner"><?php echo $pageNav ;?></div></div>
 
 <!-- 图片列表 -->
 

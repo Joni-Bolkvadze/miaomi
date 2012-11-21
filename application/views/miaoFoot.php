@@ -16,14 +16,13 @@
 <!--大图查看弹出层 End-->
 </body>
  
-	<script type="text/javascript" src="public/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="public/js/jquery.imgareaselect.pack.js"></script>
-	<script type="text/javascript" src="public/js/jquery.masonry.min.js"></script>
-	<script type="text/javascript" src="public/js/jquery.infinitescroll.js"></script>
-	<script type="text/javascript" src="public/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="public/js/jquery.mousewheel.min.js"></script>
-	<script type="text/javascript" src="public/js/jsTemp.js"></script>
-	<script type="text/javascript" src="public/js/miaomi.js"></script>
+	<script type="text/javascript" src="<?php echo(base_url('public/js\/').'jquery-1.7.2.min.js');?>"></script>	
+	<script type="text/javascript" src="<?php echo(base_url('public/js\/').'jquery.imgareaselect.pack.js');?>"></script>
+	<script type="text/javascript" src="<?php echo(base_url('public/js\/').'jquery.masonry.min.js');?>"></script>
+	<script type="text/javascript" src="<?php echo(base_url('public/js\/').'bootstrap.min.js');?>"></script>
+	<script type="text/javascript" src="<?php echo(base_url('public/js\/').'jquery.mousewheel.min.js');?>"></script>
+	<script type="text/javascript" src="<?php echo(base_url('public/js\/').'jsTemp.js');?>"></script>
+	<script type="text/javascript" src="<?php echo(base_url('public/js\/').'miaomi.js');?>"></script>
 	<script type="text/javascript">
 	$(function(){
 
@@ -74,43 +73,7 @@
 		    
 		}
 
-        $(function () {
-
-            var $container = $('#mainList');     
-            var lastimgid=$(".item").last().attr("imgid");
-                        
-                        $("#page-nav a").attr("href","imglist/page/"+lastimgid);       
-            
-            $container.infinitescroll({
-                    navSelector:'#page-nav', // selector for the paged navigation
-                    nextSelector:'#page-nav a', // selector for the NEXT link (to page 2)
-                    itemSelector:'.item', // selector for all items you'll retrieve
-                    loading:{
-                        finishedMsg:'No more pages to load.',
-                        img:'http://i.imgur.com/6RMhx.gif'
-                    },                    
-                    bufferPx:0,
-                    debug:"true",
-                    errorCallback: function(){$(".loading-txt").fadeIn(300)}
-                },
-                // trigger Masonry as a callback
-                function (newElements) {
-
-                    // hide new items while they are loading
-                    var $newElems = $(newElements).css({ opacity:0 });
-                    // ensure that images load before adding to masonry layout
-                    $newElems.imagesLoaded(function () {
-                        // show elems now they're ready
-                        $newElems.animate({ opacity:1 });
-                        $container.masonry('appended', $newElems, true);
-                        var lastimgid=$(".item").last().attr("imgid");  
-                        Miaomi.log(lastimgid);                      
-                        $("#page-nav a").attr("href","imglist/page/"+lastimgid);
-                    });
-                }
-            );
-
-        });
+  
 
 
 

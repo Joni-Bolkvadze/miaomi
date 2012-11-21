@@ -163,9 +163,11 @@ input[type="text"]:focus{border-color:#efddaa;outline:none;}
 .pager-inner a:last-child{border-radius:0 3px 3px 0;}
 .pager-inner a:first-child:last-child{border-radius:3px;}
 .pager a,
-.pager .ellipsis{ display: inline-block;height:30px;line-height:30px;margin-right:-1px;min-width:30px;white-space:nowrap;text-align:center;background-color: #FEFAEC;color:#a29292;vertical-align: top;border:1px solid #DED8C4}
+.pager b,
+.pager .ellipsis{ float: left;height:30px;line-height:30px;margin-right:-1px;padding:0 10px;white-space:nowrap;text-align:center;background-color: #FEFAEC;color:#a29292;vertical-align: top;border:1px solid #DED8C4}
 .pager .next,
 .pager .prev{width:58px;}
+.pager b{cursor: auto;}
 .pager a:hover{background-color: #fff;color:#f08b49}
 .pager .current{ background-color: #f08b49 !important;border-color:#d67c41 !important; position: relative;color:#fff !important}
 
