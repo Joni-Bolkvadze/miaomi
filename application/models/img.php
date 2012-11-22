@@ -71,7 +71,71 @@ class Img extends CI_Model {
         $this->db->insert('like', $data); 
     }
 
-    
+    // 获取某id图片的所有信息
+    function getImgUserByImgID($imgid)
+    {        
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from("img");
+        $this->db->join("user", "img.imguid = user.uid","inner");
+        $this->db->where("imgid",$imgid);
+        $this->db->order_by("imgid", "DESC");
+        $query = $this->db->get();
+        $data_array = $query->result_array();
+        // print_r($data_array);
+        if($data_array) return $data_array[0];
+        else return false;
+    }
+
+
+    // 获取当前imgid下一张图片
+    function getImgNextID($imgid,$imguid)
+    {
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from("img");        
+        $this->db->where("imguid",$imguid);
+        $this->db->where("imgid > ",$imgid);
+        $this->db->limit(1);
+        $this->db->order_by("imgid", "ASC");
+        $query = $this->db->get();
+        $data_array = $query->result_array();
+        // print_r($data_array);
+        if($data_array) return $data_array[0];
+        else return false;
+    }
+
+    // 获取当前imgid上一张图片
+    function getImgPreID($imgid,$imguid)
+    {
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from("img");        
+        $this->db->where("imguid",$imguid);
+        $this->db->where("imgid < ",$imgid);
+        $this->db->limit(1);
+        $this->db->order_by("imgid", "DESC");
+        $query = $this->db->get();
+        $data_array = $query->result_array();
+        // print_r($data_array);
+        if($data_array) return $data_array[0];
+        else return false;
+    }
+
+    // 获取某一图片的所有的评论
+    function getCommentByImgID($imgid)
+    {
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from("comment");        
+        $this->db->where("comment_imgid",$imgid);        
+        $query = $this->db->get();
+        $data_array = $query->result_array();
+        // print_r($data_array);
+        if($data_array) return $data_array[0];
+        else return false;
+    }
+
     // 更新用户
     function updateImg()
     {
