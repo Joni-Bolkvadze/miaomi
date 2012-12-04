@@ -41,6 +41,9 @@
 $route['default_controller'] = "imglist";
 $route['404_override'] = '';
 
+$route['page/(:num)'] = "imglist/page/$1";
+$route['image/(:num)'] = "image/index/$1";
+$route['user/(:num)'] = "user/index/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

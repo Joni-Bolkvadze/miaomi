@@ -1,0 +1,9 @@
+<tile>
+  <visual>
+    <binding template="TileSquarePeekImageAndText02">
+      <image id="1" src="image1" alt="alt text"/>
+      <text id="1">Text Header Field 1</text>
+      <text id="2">Text Field 2</text>
+    </binding>  
+  </visual>
+</tile>

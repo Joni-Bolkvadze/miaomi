@@ -36,9 +36,9 @@ class uploadcat extends CI_Controller {
             $config['file_name'] = $imgname.".jpg";
             $config['upload_path'] = 'public/uploads';
             $config['allowed_types'] = 'gif|jpg|png|jpeg';
-            $config['max_size'] = '10000';
-            $config['max_width']  = '1024';
-            $config['max_height']  = '1000';
+            $config['max_size'] = '50000';
+            $config['max_width']  = '5024';
+            $config['max_height']  = '5000';
 
             $this->load->library('upload', $config);
 

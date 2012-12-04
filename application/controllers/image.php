@@ -10,9 +10,8 @@ class image extends CI_Controller {
     public function index($imgid)
     {
 
-       // $this->load->view("miaoHead",$this->getUserInfo());
-       // $this->load->view("V_image");   
-       // $this->load->view("miaoFoot");   
+       $this->load->view("miaoHead",$this->getUserInfo());
+      
         $this->load->model("img","imginfo");
         $imgData=$this->imginfo->getImgUserByImgID($imgid); 
         if($imgData){            
@@ -24,9 +23,11 @@ class image extends CI_Controller {
             $data['imgnext']=$imgNextData;
             $data['imgpre']=$imgPreData;
             $data['imgcomment']=$imgCommentData;
-            print_r($data);            
+            // print_r($data);            
+            $this->load->view("V_image",$data);
         }
         else echo("图片不存在哦！");
+         $this->load->view("miaoFoot");   
     }
     
     public function getUserInfo()

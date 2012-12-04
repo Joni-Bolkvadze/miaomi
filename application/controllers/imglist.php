@@ -56,7 +56,7 @@ class imglist extends CI_Controller {
         
 
         $this->load->library('pagination');
-        $config['base_url'] = base_url('/imglist/page/');
+        $config['base_url'] = base_url('/page/');
         $config['total_rows'] = $this->db->count_all("img");
         $config['per_page'] = 20;
         $config['use_page_numbers'] = TRUE;

@@ -7,7 +7,7 @@ class Comment extends CI_Model {
         parent::__construct();
     }
     
-
+    // 
     function getCountImg($imgid)
     {
         $this->load->database();

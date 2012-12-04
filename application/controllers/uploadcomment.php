@@ -25,7 +25,7 @@ class uploadComment extends CI_Controller {
                  
     }
 
-
+    // 添加用户评论的api
     public function uploadCommentAPI()
     {
         session_start();
@@ -61,8 +61,7 @@ class uploadComment extends CI_Controller {
             $text=$this->input->post('comment_text',true);
             
             $this->userComment->insertComment($imgid,$uid,$uname,$text);
-             return 1;
-           
+             return 1;           
         }   
         // 用户木有登陆
         else return 3;

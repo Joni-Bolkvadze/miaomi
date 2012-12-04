@@ -126,13 +126,14 @@ class Img extends CI_Model {
     function getCommentByImgID($imgid)
     {
         $this->load->database();
-        $this->db->select("*");
-        $this->db->from("comment");        
-        $this->db->where("comment_imgid",$imgid);        
-        $query = $this->db->get();
-        $data_array = $query->result_array();
-        // print_r($data_array);
-        if($data_array) return $data_array[0];
+        $this->db->select('*');
+        $this->db->from('comment');
+        $this->db->where('comment_imgid',$imgid);
+        $this->db->order_by('comment_date',"ASC");
+        $this->db->join('user', 'comment.comment_uid = user.uid');
+        $query=$this->db->get();
+        $data_array=$query->result_array();                
+        if($data_array) return $data_array;
         else return false;
     }
 

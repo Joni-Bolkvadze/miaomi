@@ -2,10 +2,10 @@
 			<div class="single-preview">
 			<div class="single-inner">
 				<div class="mod-avatar-txt pic-info">
-					<a href="#" class="avatar-wrap"><img src="http://www.getimg.in/img/50x50tsunyanzi" alt="" class="avatar"></a>
+					<a href="#" class="avatar-wrap"><img src="<?php echo($imgdata['uavatar']) ;?>" alt="" class="avatar"></a>
 					<div class="txt-wrap">
-						<p class="nickname-wrap"><a href="#" class="nickname">船到桥头自然沉</a></p>
-						<p>上传于 2012-09-12</p>
+						<p class="nickname-wrap"><a href="#" class="nickname"><?php echo($imgdata['uname'])?></a></p>
+						<p>上传于 <?php echo($imgdata['imgdate'])?></p>
 					</div>
 				</div>
 				<div class="pic-preview">
@@ -16,76 +16,64 @@
 					</div>
 					<div class="pic-preview-inner">
 						<a href="#">
-							<img src="http://www.getimg.in/img/640x500tbigcat" alt="" class="pic">
+							<img src="<?php echo(base_url('public/uploads\/').$imgdata['imgname']) ;?>.jpg" alt="" class="pic">
 						</a>
 
 					</div>
-					<p class="pic-preview-info">二货喵星人！啪啪啪啪啪！！</p>
+					<p class="pic-preview-info"><?php echo($imgdata['imgtext'])?></p>
 					<p class="pic-info-num"><span class="num-com">12评论</span><span class="num-like"><span class="num-like-detail">0</span>喜欢</span><span class="num-share">2分享</span></p>
 				</div>
-				<!--<div class="more-info-item">-->
-					<!--<div class="more-info-list">-->
-						<!--<h3>他们也喜欢这只喵星人：</h3>-->
-						<!--<ul class="list-pic">-->
-							<!--<li><a href="#"><img src="http://www.getimg.in/img/50x50tbluecat" alt=""></a></li>-->
-							<!--<li><a href="#"><img src="http://www.getimg.in/img/50x50tredcat" alt=""></a></li>-->
-							<!--<li><a href="#"><img src="http://www.getimg.in/img/50x50tsmallcat" alt=""></a></li>-->
-							<!--<li><a href="#"><img src="http://www.getimg.in/img/50x50tblackcat" alt=""></a></li>-->
-						<!--</ul>-->
-					<!--</div>-->
-				<!--</div>-->
-				<!--<div class="more-info-item">-->
-					<!--<div class="more-info-list list-a">-->
-						<!--<h3>他们也喜欢：</h3>-->
-						<!--<ul class="list-pic">-->
-							<!--<li><a href="#"><img src="http://www.getimg.in/img/50x50tbluecat" alt=""></a></li>-->
-							<!--<li><a href="#"><img src="http://www.getimg.in/img/50x50tredcat" alt=""></a></li>-->
-							<!--<li><a href="#"><img src="http://www.getimg.in/img/50x50tsmallcat" alt=""></a></li>-->
-							<!--<li><a href="#"><img src="http://www.getimg.in/img/50x50tblackcat" alt=""></a></li>-->
-							<!--<li><a href="#"><img src="http://www.getimg.in/img/50x50tblackcat" alt=""></a></li>-->
-						<!--</ul>-->
-					<!--</div>-->
-					<!--<div class="more-info-list list-b">-->
-						<!--<h3>他们也喜欢：</h3>-->
-						<!--<ul class="list-pic">-->
-							<!--<li><a href="#"><img src="http://www.getimg.in/img/50x50tbluecat" alt=""></a></li>-->
-							<!--<li><a href="#"><img src="http://www.getimg.in/img/50x50tredcat" alt=""></a></li>-->
-							<!--<li><a href="#"><img src="http://www.getimg.in/img/50x50tsmallcat" alt=""></a></li>-->
-							<!--<li><a href="#"><img src="http://www.getimg.in/img/50x50tblackcat" alt=""></a></li>-->
-						<!--</ul>-->
-					<!--</div>-->
-				<!--</div>-->
+				<div class="more-info-item">
+					<div class="more-info-list">
+						<h3>他们也喜欢这只喵星人：</h3>
+						<ul class="list-pic">
+							<li><a href="#"><img src="http://www.getimg.in/img/50x50tbluecat" alt=""></a></li>
+							<li><a href="#"><img src="http://www.getimg.in/img/50x50tredcat" alt=""></a></li>
+							<li><a href="#"><img src="http://www.getimg.in/img/50x50tsmallcat" alt=""></a></li>
+							<li><a href="#"><img src="http://www.getimg.in/img/50x50tblackcat" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="more-info-item">
+					<div class="more-info-list list-a">
+						<h3>他们也喜欢：</h3>
+						<ul class="list-pic">
+							<li><a href="#"><img src="http://www.getimg.in/img/50x50tbluecat" alt=""></a></li>
+							<li><a href="#"><img src="http://www.getimg.in/img/50x50tredcat" alt=""></a></li>
+							<li><a href="#"><img src="http://www.getimg.in/img/50x50tsmallcat" alt=""></a></li>
+							<li><a href="#"><img src="http://www.getimg.in/img/50x50tblackcat" alt=""></a></li>
+							<li><a href="#"><img src="http://www.getimg.in/img/50x50tblackcat" alt=""></a></li>
+						</ul>
+					</div>
+					<div class="more-info-list list-b">
+						<h3>他们也喜欢：</h3>
+						<ul class="list-pic">
+							<li><a href="#"><img src="http://www.getimg.in/img/50x50tbluecat" alt=""></a></li>
+							<li><a href="#"><img src="http://www.getimg.in/img/50x50tredcat" alt=""></a></li>
+							<li><a href="#"><img src="http://www.getimg.in/img/50x50tsmallcat" alt=""></a></li>
+							<li><a href="#"><img src="http://www.getimg.in/img/50x50tblackcat" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
 				<div class="mod-comment">
 					<div class="mod-comment-list">
-						<ul class="list">
-							<li class="list-item">
-								<div class="mod-avatar-txt">
-									<a href="#" class="avatar-wrap"><img src="http://www.getimg.in/img/50x50tsunyanzi" alt="" class="avatar"></a>
-									<div class="txt-wrap">
-										<p class="nickname-wrap"><a href="#" class="nickname">船到桥头自然沉</a> <span class="date">- 前天说：</span></p>
-										<p>我姨妈是90后！啪啪啪啪啪！嘿咻嘿咻嘿咻！巴扎黑！我姨妈是90后！啪啪啪啪啪！嘿咻嘿咻嘿咻！巴扎黑！我姨妈是90后！啪啪啪啪啪！嘿咻嘿咻嘿咻！巴扎黑！我姨妈是90后！啪啪啪啪啪！嘿咻嘿咻嘿咻！巴扎黑！我姨妈是90后！啪啪啪啪啪！嘿咻嘿咻嘿咻！巴扎黑！</p>
+						<?php if($imgcomment): ?>
+							<ul class="list">
+								<?php foreach ($imgcomment as $item):?>
+								<li class="list-item">
+									<div class="mod-avatar-txt">
+										<a href="#" class="avatar-wrap"><img src="<?php echo($item['uavatar']) ;?>" alt="" class="avatar"></a>
+										<div class="txt-wrap">
+											<p class="nickname-wrap"><a href="#" class="nickname"><?php echo($item['uname']) ;?></a> <span class="date">- <?php echo($item['comment_date']) ;?>：</span></p>
+											<p><?php echo($item['comment_text']) ;?></p>
+										</div>
 									</div>
-								</div>
-							</li>
-							<li class="list-item">
-								<div class="mod-avatar-txt">
-									<a href="#" class="avatar-wrap"><img src="http://www.getimg.in/img/50x50tsunyanzi" alt="" class="avatar"></a>
-									<div class="txt-wrap">
-										<p class="nickname-wrap"><a href="#" class="nickname">船到桥头自然沉</a> <span class="date">- 前天说：</span></p>
-										<p>我姨妈是90后！啪啪啪啪啪！嘿咻嘿咻嘿咻！</p>
-									</div>
-								</div>
-							</li>
-							<li class="list-item">
-								<div class="mod-avatar-txt">
-									<a href="#" class="avatar-wrap"><img src="http://www.getimg.in/img/50x50tsunyanzi" alt="" class="avatar"></a>
-									<div class="txt-wrap">
-										<p class="nickname-wrap"><a href="#" class="nickname">船到桥头自然沉</a> <span class="date">- 前天说：</span></p>
-										<p>我姨妈是90后！啪啪啪啪啪！嘿咻嘿咻嘿咻！</p>
-									</div>
-								</div>
-							</li>
-						</ul>
+								</li>
+								<?php endforeach;?>
+							</ul>					
+						<?php else: ?>					
+						<?php endif;?>
+						
 					</div>
 					<div class="mod-comment-report">
 						<div class="avatar-wrap">
